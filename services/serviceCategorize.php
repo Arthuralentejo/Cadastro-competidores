@@ -1,10 +1,11 @@
 <?php
 
 
-function categorize(String $nome, String $idade) : ?string {
+function categoriaCompetidor(String $nome, String $idade) : ?string {
     $categorias = ['infantil','adolescente','adulto'];
 
     if (validaNome($nome) && validaIdade($idade)) {
+        removeErrorMessage();
         if($idade>=6 && $idade <=12){
             foreach($categorias as $i){
                 if($i == 'infantil'){
@@ -32,6 +33,7 @@ function categorize(String $nome, String $idade) : ?string {
         }
     }
     else{
+        removeSuccessMessage();
         return getErrorMessage();
     }
 
