@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,16 @@
 
 <body>
     <p>Formulário para incrição de competidores</p>
+    <?php 
+        $mensagemSucesso = isset($_SESSION['success']) ? $_SESSION['success'] : '';
+        if(!empty($mensagemSucesso)){
+            echo $mensagemSucesso;
+        }
+        $mensagemErro = isset($_SESSION['erro']) ? $_SESSION['erro'] : '';
+        if(!empty($mensagemErro)){
+            echo $mensagemErro;
+        }
+    ?>
     <form action="script.php" method="POST">
         <p>Seu nome: <input type="text" name="nome" /></p>
         <p>Sua idade: <input type="text" name="idade" /></p>
