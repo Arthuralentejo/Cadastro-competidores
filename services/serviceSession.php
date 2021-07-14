@@ -1,18 +1,18 @@
 <?php
 session_start();
-function setErrorMessage(string $mensagem) : void {
-    $_SESSION['erro'] = $mensagem;
+function setErrorMessage(string $message) : void {
+    $_SESSION['error'] = $message;
 }
 
 function getErrorMessage() : ?string{
-    if(isset($_SESSION['erro'] )){
-        return $_SESSION['erro'];
+    if(isset($_SESSION['error'] )){
+        return $_SESSION['error'];
     }
     return null;
 }
 
-function setSuccessMessage(string $mensagem) : void {
-    $_SESSION['success'] = $mensagem;
+function setSuccessMessage(string $message) : void {
+    $_SESSION['success'] = $message;
 }
 
 function getSuccessMessage() : ?string{
@@ -23,8 +23,8 @@ function getSuccessMessage() : ?string{
 }
 
 function removeErrorMessage() : void{
-    if(isset($_SESSION['erro'] )){
-        unset($_SESSION['erro']);
+    if(isset($_SESSION['error'] )){
+        unset($_SESSION['error']);
     }
 }
 

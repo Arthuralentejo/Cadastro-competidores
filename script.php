@@ -1,10 +1,11 @@
 <?php
-include 'services/sessionMessage.php';
+include 'services/serviceSession.php';
 include 'services/dataValidation.php';
 include 'services/serviceCategorize.php';
 
-$nome = $_POST['nome'];
-$idade = $_POST['idade'];
+$name = $_POST["nome"];
+$age = $_POST["idade"];
 
-categoriaCompetidor($nome,$idade);
+
+categorizeCompetitor($name,$age);
 header('location: index.php');

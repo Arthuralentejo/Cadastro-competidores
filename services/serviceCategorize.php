@@ -1,31 +1,31 @@
 <?php
 
 
-function categoriaCompetidor(String $nome, String $idade) : ?string {
-    $categorias = ['infantil','adolescente','adulto'];
+function categorizeCompetitor(String $name, String $age) : ?string {
+    $categories = ['infantil','adolescente','adulto'];
 
-    if (validaNome($nome) && validaIdade($idade)) {
+    if (validateName($name) && validateAge($age)) {
         removeErrorMessage();
-        if($idade>=6 && $idade <=12){
-            foreach($categorias as $i){
+        if($age>=6 && $age <=12){
+            foreach($categories as $i){
                 if($i == 'infantil'){
-                    setSuccessMessage("O nadador ".$nome." compete na categoria ".$i);
+                    setSuccessMessage("O nadador ".$name." compete na categoria ".$i);
                     return null;
                 }
             }
         
-        } else if($idade>=13 && $idade <=18){
-            foreach($categorias as $i){
+        } else if($age>=13 && $age <=18){
+            foreach($categories as $i){
                 if($i == 'adolescente'){
-                    setSuccessMessage("O nadador ".$nome." compete na categoria ".$i);
+                    setSuccessMessage("O nadador ".$name." compete na categoria ".$i);
                     return null;
                 }
             }
         }
         else{
-            foreach($categorias as $i){
+            foreach($categories as $i){
                 if($i == 'adulto'){
-                    setSuccessMessage("O nadador ".$nome." compete na categoria ".$i);
+                    setSuccessMessage("O nadador ".$name." compete na categoria ".$i);
                     return null;
                 }
             }

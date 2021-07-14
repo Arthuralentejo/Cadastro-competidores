@@ -1,6 +1,6 @@
-<?php include 'services/sessionMessage.php'; ?>
+<?php include 'services/serviceSession.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,13 @@
 <body>
     <p>Formulário para incrição de competidores</p>
     <?php 
-        $mensagemSucesso = getSuccessMessage();
-        if(!empty($mensagemSucesso)){
-            echo $mensagemSucesso;
+        $successMessage = getSuccessMessage();
+        if(!empty($successMessage)){
+            echo $successMessage;
         }
-        $mensagemErro = getErrorMessage();
-        if(!empty($mensagemErro)){
-            echo $mensagemErro;
+        $errorMessage = getErrorMessage();
+        if(!empty($errorMessage)){
+            echo $errorMessage;
         }
     ?>
     <form action="script.php" method="POST">
